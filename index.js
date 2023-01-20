@@ -7,7 +7,6 @@ const FlattenArray = (arr) => {
           return FlattenArray(arr[0]).concat(FlattenArray(arr.slice(1)))
       } 
    }
-
    return [arr]  
 }
 
@@ -18,7 +17,12 @@ let arr = [
     [5],
     [[[6, 7, 8]]]
 ]
-const res = FlattenArray(arr)
+const result = FlattenArray(arr)
  
 // Result: [ 1, 2, 3, 4, 5, 6, 7, 8 ]
-console.log('res', res)
+console.log('result', result)
+
+const CHECK_FOR_VALUE_2 = 2
+const CHECK_FOR_VALUE_9 = 9
+console.log(`Look up for value: ${CHECK_FOR_VALUE_2}`, result.includes(CHECK_FOR_VALUE_2))
+console.log(`Look up for value: ${CHECK_FOR_VALUE_9}`, result.includes(CHECK_FOR_VALUE_9))
